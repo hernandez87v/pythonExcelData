@@ -6,4 +6,6 @@ worksheets = spreadsheet_file.sheet_names
 appended_data = []
 
 for sheet_name in worksheets:
-    print(sheet_name)
+    produce = "PRODUCE"
+    df = pd.read_excel(spreadsheet_file, sheet_name, header=0)
+    print(df.head(1))
