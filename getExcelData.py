@@ -1,7 +1,7 @@
 import pandas as pd
 
 spreadsheet_file = pd.ExcelFile(
-    "/mnt/HDD/CODE/pythonExcelData/produceSales.xlsx")
+    "produceSales.xlsx")
 worksheets = spreadsheet_file.sheet_names
 appended_data = []
 
@@ -15,4 +15,4 @@ for sheet_name in worksheets:
 
 appended_data = pd.concat(appended_data)
 appended_data.to_excel(
-    "/mnt/HDD/CODE/pythonExcelData/output.xlsx")
+    "output.xlsx")
